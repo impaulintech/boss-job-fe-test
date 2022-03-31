@@ -1,0 +1,14 @@
+.pagination_container {
+  margin: 0 27px;
+  padding: 20px 0px;
+}
+.pagination_container > ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+  padding: 0;
+}
+.pagination_container > ul > li {
+  list-style: none;
+}
