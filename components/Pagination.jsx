@@ -6,7 +6,7 @@ export const Pagination = () => {
   const paginate = page >= 5 ? [1, 2, 3, 4, 5] : [6, 7, 8, 9, 10];
   return (
     <>
-      <div className={ps.pagination_container}>
+      <div className={ps.paginationContainer}>
         <ul>
           <li>
             <a href="#">{"<"}</a>

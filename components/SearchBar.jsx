@@ -1,14 +1,18 @@
 import Image from "next/image";
-import React from "react";
-import Search from "../img/search.png";
+import React, { useState } from "react";
+import Search from "../assets/img/search.png";
 import SearchBarStyles from "../styles/SearchBar.module.css";
+import FilterResults from "./FilterResults";
 
 export const SearchBar = () => {
   const sbs = SearchBarStyles;
+  const [filter, setFilter] = useState(false);
+
   return (
     <>
-      <div className={sbs.search_bar_container}>
-        <div className={sbs.search_bar}>
+      {filter ? <FilterResults setFilter={setFilter} /> : null}
+      <div className={sbs.searchBarContainer}>
+        <div className={sbs.searchBar}>
           <div className={sbs.img}>
             <Image src={Search} alt="search bar" />
           </div>
@@ -17,8 +21,8 @@ export const SearchBar = () => {
             placeholder="Search for job title or company name"
           />
         </div>
-        <div className={sbs.filter_result}>
-          <button>Filter results</button>
+        <div className={sbs.filterResult}>
+          <button onClick={() => setFilter(true)}>Filter results</button>
         </div>
       </div>
     </>

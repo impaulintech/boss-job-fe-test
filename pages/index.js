@@ -9,13 +9,14 @@ export default function Home() {
     <div className={styles.app}>
       <div className={styles.appWrapper}>
         <Header />
-        <SearchBar />
-        <div className={styles.total_jobs}>
-          <span>1231 jobs found</span>
-        </div>
-        <JobTemplate />
-        <JobTemplate />
-        <JobTemplate />
+        <main>
+          <SearchBar />
+          <div className={styles.total_jobs}>
+            <span>1231 jobs found</span>
+          </div>
+          <JobTemplate />
+          <JobTemplate />
+        </main>
         <Pagination />
       </div>
     </div>

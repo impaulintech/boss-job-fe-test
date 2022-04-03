@@ -1,42 +1,42 @@
-.job_template_container {
+.jobTemplateContainer {
   padding: 10px 0px;
   border-bottom: 1px solid var(--border-color);
   margin: 0px 27px;
   cursor: pointer;
 }
 
-.jtc_img {
+.jtcImg {
   width: 12%;
 }
 
-.jtc_top {
+.jtcTop {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   flex-wrap: nowrap;
   padding: 0px;
 }
-.jtc_top > h3 {
+.jtcTop > h3 {
   font-weight: 600;
   color: var(--color-dark);
 }
-.jtc_top > h3 + h3,
-.jtc_top > h4 {
+.jtcTop > h3 + h3,
+.jtcTop > h4 {
   text-align: end;
   white-space: nowrap;
   font-weight: 600;
   color: var(--color-dark);
 }
-.jtc_top > h4 {
+.jtcTop > h4 {
   padding: 9px 0px;
-  font-size: 12px;
+  font-size: 15px;
 }
 
-.jtc_mid {
+.jtcMid {
   display: flex;
   flex-wrap: wrap;
 }
-.jtc_mid > span {
+.jtcMid > span {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -46,22 +46,24 @@
   padding: 0px;
 }
 
-.jtc_bot {
+.jtcBot {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.jtc_bot > .jtc_bot_img {
-  width: 36%;
+.jtcBot > .jtcBot_img {
+  width: 30%;
+  padding: 12px;
 }
-.jtc_bot > .company_link {
+.jtcBot > .company_link {
   display: flex;
   align-items: center;
   width: 72%;
   gap: 0.5rem;
   font-size: 15px;
+  padding: 20px 0px 10px 0px;
 }
-.jtc_bot > span {
+.jtcBot > span {
   width: 18;
   color: var(--color-disable);
 }
