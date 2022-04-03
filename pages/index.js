@@ -12,7 +12,7 @@ export default function Home() {
         <main>
           <SearchBar />
           <div className={styles.total_jobs}>
-            <span>1231 jobs found</span>
+            <span>1231 jobs found.</span>
           </div>
           <JobTemplate />
           <JobTemplate />
