@@ -4,9 +4,9 @@ import { useState } from 'react';
 export const Pagination = () => {
   const ps = PaginationStyles;
 
-  const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+  const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 220];
 
-  const [currentPage, setCurrentPage] = useState(1)
+  const [currentPage, setCurrentPage] = useState(15)
   const lastPage = currentPage + 3
   const firstPage = lastPage - 4
 
@@ -39,15 +39,15 @@ export const Pagination = () => {
 
           })}
 
-          {["...", arr.length + 1].map((value) => {
+          {["...", arr[arr.length - 1]].map((value) => {
             return currentPage <= arr.length - 6
               ? value === "..." ? <li key={value}>
                 <a href="#">{value}</a>
               </li> : <li key={value}>
-                <a href="#">{value - 1}</a>
+                <a href="#">{value}</a>
               </li>
               : value === "..." ? null : <li key={value}>
-                <a href="#">{value - 1}</a>
+                <a href="#">{value}</a>
               </li>
           })}
 
