@@ -4,7 +4,7 @@ import { useState } from 'react';
 export const Pagination = () => {
   const ps = PaginationStyles;
 
-  const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 220];
+  const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
 
   const [currentPage, setCurrentPage] = useState(1)
   const lastPage = currentPage + 3
@@ -20,7 +20,7 @@ export const Pagination = () => {
       <div className={ps.paginationContainer}>
         <ul>
 
-          <li onClick={() => { setCurrentPage(currentPage - 1) }}>
+          <li onClick={() => { currentPage === 1 ? null : setCurrentPage(currentPage - 1) }}  >
             <a href="#">{"<"}</a>
           </li>
 
@@ -69,7 +69,7 @@ export const Pagination = () => {
           })}
 
           <li>
-            <a href="#" onClick={() => { setCurrentPage(currentPage + 1) }}>{">"}</a>
+            <a href="#" onClick={() => { currentPage === arr[arr.length - 1] ? null : setCurrentPage(currentPage + 1) }}>{">"}</a>
           </li>
 
 
